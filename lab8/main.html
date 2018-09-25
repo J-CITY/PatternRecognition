@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+      <script src="script/gen.js"></script>
+      <script src="script/input.js"></script>
+      <script src="script/numeric-1.2.6.js"></script>
+
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+    </head> 
+    <body>
+        <div id="vectorControl">
+            <input type="number" value="" placeholder="Mix" id="inputMix" onchange="genInputs();">
+            <input type="number" value="" placeholder="N" id="inputN" onchange="genInputs();">
+            <input type="number" value="" placeholder="Size" id="inputSize">
+            <input type="number" value="" placeholder="Size train" id="inputSizeTrain">
+            <input type="button" class="mbtn" id="genSample" value="OK" onClick="randNormN();">
+            <br>
+            <input id="isNorm" type="checkbox" checked>
+            <label for="isNorm">Is norm matrix?</label>
+        </div>
+        <br>
+        <!--<div id="LostMatrix"></div><br>-->
+        <div id="P"></div><br>
+        <div id="kNorm"></div><br>
+        <div id="D"></div><br>
+        <div id="M"></div><br>
+        
+        <div id="paramsPrint"></div><br>
+
+        <div id="dimControl">
+            <input type="number" value="" placeholder="Dim1" id="dim1" onchange="setDim();Draw();">
+            <input type="number" value="" placeholder="Dim2" id="dim2" onchange="setDim();Draw();">
+        </div>
+
+
+        <div id="graphControl">
+            <input id="printPointsTrain" type="checkbox" checked onChange="Draw();">
+            <label for="printPointsTrain" class="cb">Train points</label>
+            <input id="printPointsTrainAuto" type="checkbox" checked onChange="Draw();">
+            <label for="printPointsTrainAuto" class="cb">Auto train points</label>
+
+            <!--<select id="blist">
+                <option>Идеальный к-р</option>
+                <option>Максимального правдоподобия</option>
+                <option>Парзеновские окона</option>
+                <option>Ближайший сосед</option>
+                <option>K ближайших соседей</option>
+                <option>Оценка плотности через K ближайших соседей</option>
+                <option>Через ячейки фиксированного объёма</option>
+            </select>
+        -->
+            <select id="blistauto">
+                <option>Т алгоритм</option>
+                <option>алгоритм максиминного расстояния</option>
+                <option>алгоритм К внутригрупповых средних</option>
+                <option>isodata</option>
+            </select>
+            <br>
+            <input id="T" type="number">
+            <label for="T" class="cb">T</label>
+            <br>  
+            <input id="Alpha" type="number">
+            <label for="Alpha" class="cb">Alpha</label>
+            <br>  
+            <input id="eps" type="number">
+            <label for="eps" class="cb">Eps</label>
+            <br>  
+            <input id="ClassCount" type="number">
+            <label for="ClassCount" class="cb">Class count</label>
+            <br>  
+            <input id="Nc" type="number">
+            <label for="Nc" class="cb">Nc</label><br>  
+            <input id="On" type="number">
+            <label for="On" class="cb">On</label><br>  
+            <input id="Os" type="number">
+            <label for="Os" class="cb">Os</label><br>  
+            <input id="Oc" type="number">
+            <label for="Oc" class="cb">Oc</label><br>  
+            <input id="L" type="number">
+            <label for="L" class="cb">L</label><br>  
+            <input id="I" type="number">
+            <label for="I" class="cb">I</label><br>  
+            <input id="k" type="number">
+            <label for="k" class="cb">k</label><br>  
+            <input type="button" class="mbtn" id="regenSample" value="OK" onClick="reDraw();">
+            <br>
+        </div>
+            
+        <br><br>
+        <div id="graph" style="width:100%;height:100%"></div><br>
+    </body>
+
+</html>

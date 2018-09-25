@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+      <script src="script/gen.js"></script>
+      <script src="script/input.js"></script>
+      <script src="script/numeric-1.2.6.js"></script>
+
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+    </head> 
+    <body>
+        <div id="vectorControl">
+            <input type="number" value="" placeholder="Mix" id="inputMix" onchange="genInputs();">
+            <input type="number" value="" placeholder="N" id="inputN" onchange="genInputs();">
+            <input type="number" value="" placeholder="Size" id="inputSize">
+            <input type="number" value="" placeholder="Size train" id="inputSizeTrain">
+            <input type="button" class="mbtn" id="genSample" value="OK" onClick="randNormN();">
+            <br>
+            <input id="isNorm" type="checkbox" checked>
+            <label for="isNorm">Is norm matrix?</label>
+        </div>
+        <br>
+        <!--<div id="LostMatrix"></div><br>-->
+        <div id="P"></div><br>
+        <div id="kNorm"></div><br>
+        <div id="D"></div><br>
+        <div id="M"></div><br>
+        
+        <div id="paramsPrint"></div><br>
+
+        <div id="dimControl">
+            <input type="number" value="" placeholder="Dim1" id="dim1" onchange="setDim();Draw();">
+            <input type="number" value="" placeholder="Dim2" id="dim2" onchange="setDim();Draw();">
+        </div>
+
+
+        <div id="graphControl">
+            <input id="printPoints" type="checkbox" checked onChange="Draw();">
+            <label for="printPoints" class="cb">Points</label>
+            <input id="printPointsTrain" type="checkbox" checked onChange="Draw();">
+            <label for="printPointsTrain" class="cb">Train points</label>
+            <input id="printFunc" type="checkbox" onChange="Draw();">
+            <label for="printFunc" class="cb">Function</label>
+
+            <select id="blist">
+                <option>Идеальный к-р</option>
+                <option>Максимального правдоподобия</option>
+                <option>Парзеновские окона</option>
+                <option>Ближайший сосед</option>
+                <option>K ближайших соседей</option>
+                <option>Оценка плотности через K ближайших соседей</option>
+                <option>Через ячейки фиксированного объёма</option>
+            </select>
+
+        </div>
+            
+        <br><br>
+        <div id="graph" style="width:100%;height:100%"></div><br>
+    
+    
+        <input type="button" class="mbtn" id="saveX" value="Save X" onClick="saveX();">
+        <input type="button" class="mbtn" id="saveParam" value="Save Params" onClick="saveParams();">
+        <br>
+
+
+        <input type="file" id="loadX" value="OK"  onChange="load('loadX');"/>
+        <label for="loadX" class="label">Load X</label>
+
+        <input type="file" class="mbtn" id="loadParams" value="OK" onChange="load('loadParams');"/>
+        <label for="loadParams" class="label">Load Params</label>
+    </body>
+
+</html>

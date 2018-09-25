@@ -1,0 +1,8 @@
+Path:
+C:\Program Files (x86)\CodeBlocks\MinGW\bin
+
+
+Dependences:
+go get bitbucket.org/zombiezen/gopdf/pdf
+go install github.com/google/gxui/samples/...
+go get gonum.org/v1/plot/...

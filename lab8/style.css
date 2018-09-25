@@ -1,0 +1,60 @@
+
+.mbtn {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #01579b;
+    width: 130px;
+}
+
+.label {
+    border: none;
+    color: white;
+    padding: 10px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #01579b;
+    width: 130px;
+}
+
+input[type=file] {
+    display: none;
+}
+
+input[type=number] {
+    width: 120px;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=checkbox] {
+    margin: 8px;
+    cursor: pointer;
+    padding-left: 18px;
+    padding-right: 0;
+    line-height: 26px;
+    min-width: 18px;
+    min-height: 18px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}

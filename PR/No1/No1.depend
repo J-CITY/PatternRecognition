@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1519908815 source:c:\users\333da\desktop\no1\main.cpp
+	<iostream>
+	<vector>
+	<cstdlib>
+	<ctime>
+	<cmath>
+	<iomanip>
+
+1519908815 source:c:\users\333da\desktop\pr\no1\main.cpp
+	<iostream>
+	<vector>
+	<cstdlib>
+	<ctime>
+	<cmath>
+	<iomanip>
+
